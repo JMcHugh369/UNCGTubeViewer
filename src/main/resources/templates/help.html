@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCGTube</title>
+<link rel="stylesheet" href="/CSS/help.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">UNCGTube</div>
+            <ul class="nav-links">
+                <li><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+                <li><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+                <li><a th:href="@{/help}">Help</a></li>
+                <li><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+                <li><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+                <li><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+                <li><a th:href="@{/trending}">Trending</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="help" class="help-section">
+        <h1>Help & FAQs</h1>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="question">
+                <h3>How do I upload a video?</h3>
+                <p>To upload a video, click on the 'Upload' button in the top right corner of the homepage. You will be prompted to select a video file from your device, add a title and description, and then submit it for upload.</p>
+            </div>
+
+            <div class="question">
+                <h3>How do I subscribe to a channel?</h3>
+                <p>To subscribe to a channel, navigate to the channel's page and click the 'Subscribe' button located beneath the channel name. You will receive updates whenever this channel uploads new content.</p>
+            </div>
+
+            <div class="question">
+                <h3>How do I manage my subscriptions?</h3>
+                <p>You can manage your subscriptions by clicking on the 'Subscriptions' tab in the main menu. From there, you can view all the channels you're subscribed to, unsubscribe, and enable notifications.</p>
+            </div>
+
+            <div class="question">
+                <h3>How do I view my watch history?</h3>
+                <p>To view your watch history, click on the 'Watch History' tab in the main menu. You'll see a list of all the videos you've watched, sorted by date and time.</p>
+            </div>
+
+            <div class="question">
+                <h3>How do I delete a video from my watch history?</h3>
+                <p>To delete a video from your watch history, navigate to the 'Watch History' page. Click on the three dots next to the video you want to remove and select 'Remove from history'.</p>
+            </div>
+        </div>
+
+        <div class="contact-support">
+            <h2>Contact Support</h2>
+            <p>If you can't find the answer to your question, feel free to reach out to our support team.</p>
+            <ul>
+                <li>Email: <a href="mailto:support@uncgtube.com">support@uncgtube.com</a></li>
+                <li>Phone: 1-800-UNCG-TUBE</li>
+                <li>Support Hours: Monday - Friday, 9 AM - 5 PM</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 UNCG Tube</p>
+    </footer>
+</body>
+</html>

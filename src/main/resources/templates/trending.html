@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCGTube</title>
+    <link rel="stylesheet" href="CSS/trending.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">UNCGTube</div>
+            <ul class="nav-links">
+                <li><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+                <li><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+                <li><a th:href="@{/help}">Help</a></li>
+                <li><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+                <li><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+                <li><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+                <li><a th:href="@{/trending}">Trending</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="trending" class="trending-section">
+        <h1>Trending Videos</h1>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="Images/prototype1.jpg" alt="Trending Video 1">
+                <div class="play-button"><a href="Prototype/prototype1.html">▶</a></div>
+                <p>Tabletop Games</p>
+            </div>
+            <div class="video-card">
+                <img src="Images/prototype2.jpg" alt="Trending Video 2">
+                <div class="play-button"><a href="Prototype/prototype2.html">▶</a></div>
+                <p>Pizza | Basics with Babish</p>
+            </div>
+            <div class="video-card">
+                <img src="Images/prototype3.jpg" alt="Trending Video 3">
+                <div class="play-button"><a href="Prototype/prototype3.html">▶</a></div>
+                <p>SQL Tutorial - Full Database Course</p>
+            </div>
+            <!-- Add more video cards as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 UNCGTube</p>
+    </footer>
+</body>
+</html>

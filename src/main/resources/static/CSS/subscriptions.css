@@ -1,0 +1,140 @@
+/* Reusing UNCG Colors */
+:root {
+    --uncg-gold: #FDB927;
+    --uncg-navy: #003366;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--uncg-navy);
+    color: #003366;
+    font-family: "Comic Neue", cursive;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+header {
+    background-color: var(--uncg-gold);
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #003366;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.subscriptions-section {
+    padding: 20px;
+}
+
+.subscriptions-section h1 {
+    text-align: center;
+    color: var(--uncg-gold);
+}
+
+.channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.channel-card {
+    background-color: rgb(194, 178, 178);
+    color: var(--uncg-navy);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.channel-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.nav-links:hover {
+    background-color: var(--uncg-gold); /* Adds a background color on hover */
+    text-decoration: none; /* Underlines the text when hovered */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+
+.view-button {
+    background-color: var(--uncg-gold);
+    border: none;
+    color: var(--uncg-navy);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view-button:hover {
+    background-color: #FFC948;
+}
+
+footer {
+    background-color: var(--uncg-gold);
+    padding: 10px;
+    text-align: center;
+    color: var(--uncg-navy);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.comic-neue-light {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .comic-neue-regular {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .comic-neue-bold {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .comic-neue-light-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .comic-neue-regular-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .comic-neue-bold-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }

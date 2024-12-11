@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCGTube</title>
+    <link rel="stylesheet" th:href="@{/CSS/index.css}">
+</head>
+<body>
+    <header>
+        <h1 id="pageTitle">Welcome <span th:text="${user.firstName}">User</span></h1>
+        <div>
+            <input type="text" placeholder="Search settings ...">
+        </div>
+    </header>
+
+    <main>
+         <aside id="sideBar">
+                 <div class="logo">UNCGTube</div>
+                 <ul class="nav-links">
+                     <li><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+                     <li><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+                     <li><a th:href="@{/help}">Help</a></li>
+                     <li><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+                     <li><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+                     <li><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+                     <li><a th:href="@{/trending}">Trending</a></li>
+                 </ul>
+        </aside>
+
+        <!--Image and info belong to the content creator TheOdd1sOut-->
+        <div class="video-container">
+          <div class="video-thumbnail">
+              <img src="Images/prototype1.jpg" alt="Video Thumbnail" />
+              <div class="play-button"><a href="Prototype/prototype1.html">▶</a></div>
+          </div>
+          <div class="video-details">
+              <h2 class="video-title">Tabletop Games</h2>
+              <p class="video-description">Monopoly, ruining friendships since 1935</p>
+              <p class="video-stats">104M views • 5 years ago</p>
+          </div>
+      </div>
+
+      <!--Image and info belong to the chef Babish Culinary Universe -->
+      <div class="video-container">
+          <div class="video-thumbnail">
+              <img src="Images/prototype2.jpg" alt="Another Video Thumbnail" />
+              <div class="play-button"><a href="Prototype/prototype2.html">▶</a></div>
+          </div>
+          <div class="video-details">
+              <h2 class="video-title">Pizza | Basics with Babish</h2>
+              <p class="video-description">On this episode of Basics, I want to show you how you can make a better pizza pie</p>
+              <p>(and a calzone!) at home than anything that you could have delivered.</p>
+              <p class="video-stats">6.1M views • 6 years ago</p>
+          </div>
+      </div>
+
+
+
+    <!--Image and info belong to a band called 'The Score'-->
+    <div class="video-container">
+      <div class="video-thumbnail">
+          <img src="Images/prototype4.jpg" alt="Another Video Thumbnail" />
+          <div class="play-button"><a href="Prototype/prototype4.html">▶</a></div>
+      </div>
+      <div class="video-details">
+          <h2 class="video-title">The Score - Enemies (Official Lyric Video)</h2>
+          <p class="video-description">Stream/Download our new album 'Metamorph' Now: </p>
+          <p><a href="https://ingrv.es/metamorph-TheScore" target="_blank">https://ingrv.es/metamorph-TheScore</a></p>
+          <p>Stream/Downloadour New EP, 'Chrysalis' Now: </p>
+          <p><a href="https://ingroov.es/chrysalis" target="_blank">https://ingroov.es/chrysalis</a></p>
+          <p class="video-stats">16M views • 2 years ago</p>
+      </div>
+    </div>
+
+    <!--Image and info belong to the engineer Mark Rober-->
+    <div class="video-container">
+      <div class="video-thumbnail">
+          <img src="Images/prototype5.jpg" alt="Another Video Thumbnail" />
+          <div class="play-button"><a href="Prototype/prototype5.html">▶</a></div>
+      </div>
+      <div class="video-details">
+          <h2 class="video-title">This Ball is Impossible to Hit</h2>
+          <p class="video-description">I think next season's rules will include some revisions.</p>
+          <p class="video-stats">70M views • 1 year ago</p>
+      </div>
+    </div>
+
+    <!--Image and info belong to the comedian Gabriel Iglesias-->
+    <div class="video-container">
+      <div class="video-thumbnail">
+          <img src="Images/prototype6.jpg" alt="Another Video Thumbnail" />
+          <div class="play-button"><a href="Prototype/prototype6.html">▶</a></div>
+      </div>
+      <div class="video-details">
+          <h2 class="video-title">Chocolate Cake Shake | Gabriel Iglesias</h2>
+          <p class="video-description">You know I had to get the shake.</p>
+          <p class="video-stats">90K views • 2 months ago</p>
+      </div>
+    </div>
+    </main>
+    <!-- <script src="../JS/index.js" defer></script> -->
+</body>
+</html>
