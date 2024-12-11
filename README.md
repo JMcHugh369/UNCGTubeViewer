@@ -7,3 +7,7 @@ Table of Contents
   Target code: https://github.com/JMcHugh369/UNCGTubeViewer/tree/main/target/classes
   
   Other files: https://github.com/JMcHugh369/UNCGTubeViewer
+
+
+
+This program is not fully funtional. You are able to create and view a video. Create a user, login, update your profile and view your home page.
