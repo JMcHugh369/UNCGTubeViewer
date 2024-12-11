@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCGTube</title>
+    <link rel="stylesheet" href="../CSS/history.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">UNCGTube</div>
+            <ul class="nav-links">
+                <li><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+                <li><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+                <li><a th:href="@{/help}">Help</a></li>
+                <li><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+                <li><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+                <li><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+                <li><a th:href="@{/trending}">Trending</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="history" class="history-section">
+        <h1>Watch History</h1>
+        <div class="timeline">
+            <div class="history-item">
+                <div class="date-marker">September 30, 2024</div>
+                <div class="video-details">
+                    <img src="Images/prototype1.jpg" alt="Video 1">
+                    <div class="video-info">
+                        <h2>Tabletop Games</h2>
+                        <p>Duration: 8:08</p>
+                        <p>Watched at: 2:15 PM</p>
+                        <p>Monopoly, ruining friendships since 1935.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-item">
+                <div class="date-marker">September 28, 2024</div>
+                <div class="video-details">
+                    <img src="Images/prototype3.jpg" alt="Video 2">
+                    <div class="video-info">
+                        <h2>SQL Tutorial - Full Database Course for Beginners</h2>
+                        <p>Duration: 4:20:39</p>
+                        <p>Watched at: 11:05 AM</p>
+                        <p>This course is for beginners to SQL and database management.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-item">
+                <div class="date-marker">September 26, 2024</div>
+                <div class="video-details">
+                    <img src="Images/prototype6.jpg" alt="Video 3">
+                    <div class="video-info">
+                        <h2>Chocolate Cake Shake</h2>
+                        <p>Duration: 4:37</p>
+                        <p>Watched at: 5:45 PM</p>
+                        <p>Happy National Chocolate Cake Day! #GabrielIglesias</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more history items as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 UNCG Tube</p>
+    </footer>
+</body>
+</html>

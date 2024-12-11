@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Comment</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+<h1>Create Comment</h1>
+<form id="createCommentForm">
+    <label for="commentText">Comment:</label>
+    <textarea id="commentText" name="commentText" required></textarea>
+    <br><br>
+    <button type="submit">Submit Comment</button>
+</form>
+
+<script>
+    document.getElementById('createCommentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const commentData = {
+            text: document.getElementById('commentText').value
+        };
+
+        fetch('/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(commentData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Comment created successfully: ' + JSON.stringify(data));
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error creating comment');
+        });
+    });
+</script>
+</body>
+</html>

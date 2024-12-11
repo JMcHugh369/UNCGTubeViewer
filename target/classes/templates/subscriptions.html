@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCGTube</title>
+    <link rel="stylesheet" href="CSS/subscriptions.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">UNCGTube</div>
+            <ul class="nav-links">
+                <li><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+                <li><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+                <li><a th:href="@{/help}">Help</a></li>
+                <li><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+                <li><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+                <li><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+                <li><a th:href="@{/trending}">Trending</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="subscriptions" class="subscriptions-section">
+        <h1>Your Subscriptions</h1>
+        <div class="channel-grid">
+            <div class="channel-card">
+                <img src="Images/Avatar6.jpg" alt="Channel 1">
+                <p>TechTalk</p>
+                <button class="view-button">View Videos</button>
+            </div>
+            <div class="channel-card">
+                <img src="Images/Avatar4.webp" alt="Channel 2">
+                <p>Music Beats</p>
+                <button class="view-button">View Videos</button>
+            </div>
+            <div class="channel-card">
+                <img src="Images/Avatar3.jpeg" alt="Channel 3">
+                <p>Travel Vibes</p>
+                <button class="view-button">View Videos</button>
+            </div>
+            <!-- Add more channel cards as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 UNCG Tube</p>
+    </footer>
+</body>
+</html>

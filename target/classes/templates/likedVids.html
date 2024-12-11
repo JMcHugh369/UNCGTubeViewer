@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNCGTube</title>
+    <link rel="stylesheet" href="../CSS/likedVids.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">UNCGTube</div>
+            <ul class="nav-links">
+                <li><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+                <li><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+                <li><a th:href="@{/help}">Help</a></li>
+                <li><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+                <li><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+                <li><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+                <li><a th:href="@{/trending}">Trending</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="liked" class="liked-section">
+        <h1>Liked Videos</h1>
+        <div class="liked-videos-list">
+            <div class="liked-video-item">
+                <img src="Images/prototype4.jpg" alt="Liked Video 1">
+                <div class="video-info">
+                    <h2>The Score - Enemies (Official Lyric Video)</h2>
+                    <p>Duration: 2:43</p>
+                    <p>The Score - Enemies (Official Lyric Video) Stream/Download here: ...</p>
+                </div>
+            </div>
+            <div class="liked-video-item">
+                <img src="Images/prototype5.jpg" alt="Liked Video 2">
+                <div class="video-info">
+                    <h2>This Ball is Impossible to Hit</h2>
+                    <p>Duration: 24:20</p>
+                    <p>NO PURCHASE NECESSARY. Promotion starts on 1/1/2023 and ends on 12/31/23</p>
+                </div>
+            </div>
+            <div class="liked-video-item">
+                <img src="Images/prototype6.jpg" alt="Liked Video 3">
+                <div class="video-info">
+                    <h2>Chocolate Cake Shake</h2>
+                    <p>Duration: 3:27</p>
+                    <p>Happy National Chocolate Cake Day! #GabrielIglesias</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 UNCG Tube</p>
+    </footer>
+</body>
+</html>

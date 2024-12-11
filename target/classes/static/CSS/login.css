@@ -1,0 +1,120 @@
+body {
+    background-color: #ffd700; /* UNCG gold */
+    font-family: "Comic Neue", cursive;
+}
+
+/* Base styling for the form */
+form {
+    background-color: #002d62; /* UNCG blue */
+    color: #ffffff; /* White text for readability */
+    padding: 20px;
+    padding-right: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffd700; /* UNCG gold */
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffd700; /* UNCG gold border */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #ffffff; /* White background for inputs */
+    color: #002d62; /* UNCG blue text */
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    background-color: #ffd700; /* UNCG gold */
+    color: #002d62; /* UNCG blue */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+    background-color: #e6c300; /* Slightly darker gold on hover */
+}
+
+/* Styling for the dropdown */
+select {
+    background-color: #ffffff; /* White background for dropdown */
+    color: #002d62; /* UNCG blue text */
+}
+
+/* Add some spacing between form sections */
+form > div {
+    margin-bottom: 20px;
+}
+
+/* Style for form headings */
+form h2 {
+    color: #ffd700; /* UNCG gold */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Optional: Add a footer note */
+form p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+.comic-neue-light {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .comic-neue-regular {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .comic-neue-bold {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .comic-neue-light-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .comic-neue-regular-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .comic-neue-bold-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/CSS/video.css?v=1.0}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <nav class="navbar">
+        <div class="logo">UNCGTube</div>
+        <ul class="nav-links">
+            <li th:if="${user != null}"><a th:href="@{/users/home/{username}(username=${user.username})}">Home</a></li>
+            <li th:if="${user != null}"><a th:href="@{/profile/{id}(id=${user.id})}">Profile</a></li>
+            <li><a th:href="@{/help}">Help</a></li>
+            <li th:if="${user != null}"><a th:href="@{/subscriptions/{id}(id=${user.id})}">Subscriptions</a></li>
+            <li th:if="${user != null}"><a th:href="@{/history/{id}(id=${user.id})}">History</a></li>
+            <li th:if="${user != null}"><a th:href="@{/likedVids/{id}(id=${user.id})}">Liked Videos</a></li>
+            <li><a th:href="@{/trending}">Trending</a></li>
+        </ul>
+    </nav>
+    <script>
+        function likeVideo(videoId) {
+            fetch(`/users/${userId}/like/${videoId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Video liked successfully!');
+                } else {
+                    alert('Failed to like the video.');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<h1 th:text="${video.title}">Video Title</h1>
+<p th:text="${video.description}">Video Description</p>
+<video class="video-player-container" controls data-video-id="${video.id}">
+    <source th:src="'data:' + ${video.category} + ';base64,' + ${base64Video}" th:type="${video.category}">
+    Your browser does not support the video tag.
+</video>
+<div class="button-container">
+    <form onsubmit="handleFormSubmit(event, '/videos/video/' + [[${video.id}]] + '/like')">
+        <button type="submit">Like</button>
+    </form>
+
+    <form onsubmit="handleFormSubmit(event, '/videos/video/' + [[${video.id}]] + '/dislike')">
+        <button type="submit">Dislike</button>
+    </form>
+
+    <form onsubmit="handleCommentFormSubmit(event, '/videos/video/' + [[${video.id}]] + '/comments')">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Add Comment</button>
+    </form>
+    <div id="comments-container">
+        <div th:each="comment : ${comments}">
+            <p th:text="${comment.text}">Comment text</p>
+        </div>
+    </div>
+</div>
+<script>
+    function handleFormSubmit(event, url) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                location.reload();
+            } else {
+                console.error('Error:', response.statusText);
+            }
+        }).catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    function handleCommentFormSubmit(event, url) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        }).then(response => response.text())
+          .then(comment => {
+              if (comment) {
+                  const commentsContainer = document.getElementById('comments-container');
+                  const newComment = document.createElement('p');
+                  newComment.textContent = comment;
+                  commentsContainer.appendChild(newComment);
+                  event.target.reset();
+              } else {
+                  console.error('Failed to add comment.');
+              }
+          }).catch(error => {
+              console.error('Error:', error);
+          });
+    }
+</script>
+</body>
+</html>

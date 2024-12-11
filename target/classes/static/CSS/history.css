@@ -1,0 +1,152 @@
+/* Reusing UNCG Colors */
+:root {
+    --uncg-gold: #FDB927;
+    --uncg-navy: #003366;
+    --light-gray: #f0f0f0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--uncg-navy);
+    color: var(--uncg-navy);
+    font-family: "Comic Neue", cursive;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+header {
+    background-color: var(--uncg-gold);
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: var(--uncg-navy);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.history-section {
+    padding: 20px;
+}
+
+.history-section h1 {
+    text-align: center;
+    color: var(--uncg-gold);
+}
+
+/* Timeline layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.history-item {
+    position: relative;
+    padding-left: 40px;
+}
+
+.date-marker {
+    background-color: var(--uncg-gold);
+    color: var(--uncg-navy);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.video-details {
+    display: flex;
+    gap: 20px;
+    background-color: var(--light-gray);
+    color: var(--uncg-navy);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.video-details img {
+    width: 150px;
+    border-radius: 8px;
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.video-info h2 {
+    margin: 0;
+}
+
+.video-info p {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: var(--uncg-gold);
+    padding: 10px;
+    text-align: center;
+    color: var(--uncg-navy);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.comic-neue-light {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .comic-neue-regular {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .comic-neue-bold {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .comic-neue-light-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .comic-neue-regular-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .comic-neue-bold-italic {
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+    font-style: italic;
+  }
